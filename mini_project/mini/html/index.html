@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>상품 페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body class="light-mode">
+    <div class="container mt-4">
+      <!-- 상단 헤더 -->
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3>상품 관리</h3>
+        <div>
+          <button id="darkModeBtn" class="btn btn-outline-dark btn-sm">
+            🌙 다크모드
+          </button>
+          <a href="signup.html" class="btn btn-primary btn-sm">회원 가입</a>
+        </div>
+      </div>
+
+      <!-- 검색 영역 -->
+      <form class="row g-2 align-items-center mb-3">
+        <!-- 카테고리 -->
+        <div class="col-auto">
+          <select class="form-select" name="category_data_table">
+            <option selected>카테고리</option>
+            <option>상의</option>
+            <option>하의</option>
+            <option>신발</option>
+            <option>패션잡화</option>
+          </select>
+        </div>
+
+        <!-- 성별 -->
+        <div class="col-auto">
+          <select class="form-select">
+            <option selected>성별</option>
+            <option>남성</option>
+            <option>여성</option>
+          </select>
+        </div>
+
+        <!-- 상품명 입력 -->
+        <div class="col-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="제품명을 입력하세요"
+          />
+        </div>
+
+        <!-- 조회 버튼 -->
+        <div class="col-auto">
+          <button type="button" id="searchBtn" class="btn btn-success">
+            조회
+          </button>
+        </div>
+      </form>
+
+      <!-- 상품 테이블 -->
+      <table class="table table-bordered table-sm">
+        <thead class="table-light">
+          <tr>
+            <th>카테고리</th>
+            <th>브랜드</th>
+            <th>상품명</th>
+            <th>가격</th>
+          </tr>
+        </thead>
+        <tbody id="product_data_Table"></tbody>
+      </table>
+
+      <!-- 페이지네이션 -->
+      <nav>
+        <ul class="pagination justify-content-center">
+          <ul class="pagination justify-content-center" id="pagination"></ul>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

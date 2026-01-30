@@ -1,0 +1,99 @@
+/* =========================
+   공통 테마
+========================= */
+body.light-mode {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* =========================
+   회원가입 페이지
+========================= */
+.signup-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.dark-mode .signup-card {
+  background-color: #1e1e1e;
+}
+
+/* 제목 */
+.signup-title {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.signup-desc {
+  text-align: center;
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 32px;
+}
+
+.dark-mode .signup-desc {
+  color: #aaa;
+}
+
+/* 입력 영역 공통 */
+.signup-input {
+  margin-bottom: 20px;
+}
+
+/* input / select 포커스 */
+.form-control:focus,
+.form-select:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 0.15rem rgba(26,115,232,.25);
+}
+
+/* 셀렉트 높이 통일 */
+.signup-select {
+  height: 58px;
+}
+
+/* 버튼 */
+.signup-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.signup-btn:hover {
+  background-color: #1666c1;
+}
+
+/* =========================
+   다크모드 input 보정
+========================= */
+.dark-mode .form-control,
+.dark-mode .form-select {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-color: #444;
+}
+
+.dark-mode .form-control::placeholder {
+  color: #aaa;
+}
